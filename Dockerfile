@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 RUN npm install -g n8n
 
-USER node
+RUN mkdir -p /home/node/.n8n
 
 EXPOSE 5678
 
