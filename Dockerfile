@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 RUN npm install -g n8n
 
-RUN mkdir -p /home/node/.n8n && chmod -R 777 /home/node
+RUN mkdir -p /home/node/.n8n && chown -R node:node /home/node && chmod -R 775 /home/node
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
